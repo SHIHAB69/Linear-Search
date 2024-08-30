@@ -2,14 +2,32 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int[] nums ={12,32,43,45,676,87,53,21,34};
+        int terget = 12;
+        int ans = lineearSearch(nums, terget);
+        System.out.println(ans);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        }
+
+        //search in the array: return the index if item found
+        // Otherwise if item not found return -1
+        static int lineearSearch(int[] arr, int terget) {
+
+            if (arr.length == 0) {
+                return -1;
+            }
+
+            for (int i = 0; i < arr.length; i++) {
+
+                // check for the element every index if it is == terget
+                int element = arr[i];
+                if (element == terget) {
+                    return element;
+                }
+
+            }
+
+            return -1;
+
         }
     }
-}
