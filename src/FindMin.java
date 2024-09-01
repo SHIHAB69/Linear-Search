@@ -13,6 +13,6 @@ public class FindMin {
                 ans = arr[i];
             }
         }
-        return ans;
+        return ans; // return
     }
 }
