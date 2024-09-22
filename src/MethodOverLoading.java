@@ -2,14 +2,31 @@ import java.util.Scanner;
 
 public class MethodOverLoading {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
+        Node n1 = new Node(10);
+        Node n2 = new Node(15);
+        Node n3 = new Node(23);
+
+        Node head = n1;
+        head.next = n2;
+        n2.next = n3;
+        n3.next = null;
+
+    while(n1 != null){
+        System.out.println(n1);
+        n1 = n1.next;
 
     }
-
-    static void print(int num) {
-        System.out.println("The number is: " + num);
-
     }
 
+    static class Node{
+        int data;
+        Node next;
+
+        Node(int data){
+            this.data = data;
+        }
+    }
 
 }
+
